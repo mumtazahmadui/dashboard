@@ -1,0 +1,60 @@
+ <section>
+   <div class="container-fluid ml-auto">
+     <div class="row pl-4">
+       <div class="ml-auto col-md-10 col-sm-9 pt-4 pb-2 bg-main">
+         <div class="row">
+           <div class="col-md-5 col-sm-6">
+             <div class="row no-gutters border-bottom align-items-center">
+               <div class="col-2 text-right"> <i class="fa fa-calendar"></i><i class="fa fa-chevron-left pl-4"
+                   (click)="dp.toggle()"></i></div>
+               <div class="col-4">
+                 <input placeholder="{{ currentDate | date:'mediumDate' }}"
+                   class="form-control custom-setting text-center" #dp="bsDatepicker" bsDatepicker
+                   [bsConfig]="{ dateInputFormat: 'MMM DD, YYYY' }">
+               </div>
+               <div class="col-1 text-center"> TO </div>
+
+               <div class="col-4">
+                 <input placeholder="{{ currentDate | date:'mediumDate' }}"
+                   class="form-control custom-setting text-center" #dp2="bsDatepicker" bsDatepicker
+                   [bsConfig]="{ dateInputFormat: 'MMM DD, YYYY' }">
+               </div>
+               <div class="col-1"><i class="fa fa-chevron-right pl-2" (click)="dp2.toggle()"></i></div>
+
+             </div>
+           </div>
+           <div class="ml-auto col-md-4 col-sm-6">
+             <div class="tasks row align-items-center py-1 mx-1">
+               <div class="col-8 text-right pr-0">
+                 <strong>Christopher Walker</strong> <br>
+                 <small class="d-block mt-n1">ASME CORP</small>
+               </div>
+               <div class="col-1">
+                 <i class="fa fa-user fa-lg text-primary border p-2"></i>
+               </div>
+               <div class="col-1">
+                 <a href="#">
+                   <i class="fa fa-chevron-down fa-lg text-dark pl-4"></i>
+                 </a>
+               </div>
+             </div>
+             <!--  <div class="list-group" dropdown>
+               <a href="#" class="list-group-item list-group-item-action px-2 py-0" dropdownToggle>
+                 <div class="d-flex w-100 mb-n2">
+                   <p class="mb-0">Christopher Walker <i class="fa fa-user border p-1"></i> <span class="caret"></span>
+                   </p>
+                 </div>
+                 <small class="pl-5">ASME CORP</small>
+               </a>
+               <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
+                 aria-labelledby="button-animated">
+                 <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+                 <li role="menuitem"><a class="dropdown-item" href="#">Another action</a> </li>
+               </ul>
+             </div> -->
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
